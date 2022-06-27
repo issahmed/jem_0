@@ -17,7 +17,7 @@
                 </span>
                 <mat-form-field class="example-full-width" appearance="outline">
                   <mat-label>Email</mat-label>
-                  <input matInput formControlName="email" required>
+                  <input matInput formControlName="email" required type="email">
                   <mat-icon matSuffix>mail</mat-icon>
                   <mat-error *ngIf="authForm.get('email')?.hasError('required') || authForm.get('email')?.touched">
                     Please enter a valid email address
@@ -26,7 +26,12 @@
               </div>
             </div>
             <div class="container-auth-form-btn mt-5">
-              <button mat-flat-button color="primary" class="auth-form-btn" [disabled]="!authForm.valid " type="submit">
+              <button mat-flat-button
+              color="primary"
+                class="auth-form-btn" 
+                [disabled]="!authForm.valid "
+                type="submit"
+                >
                 Reset My Password
               </button>
             </div>
@@ -44,3 +49,4 @@
 
   </div>
 </div>
+

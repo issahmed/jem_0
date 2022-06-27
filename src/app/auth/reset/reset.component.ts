@@ -32,9 +32,17 @@ export class ResetComponent implements OnInit {
         if (this.authForm.invalid) {
           return;
         } else {
-          this.router.navigate(['/dashboard/main']);
+          this.router.navigate(['confirmation'],{relativeTo : this.route });
+          console.log("its oki until here ")
         }
       }
+      // ResetPassword(){
+      //   // verif email in DB
+      //   // send reste code ( token ) 
+      //   this.router.navigate(['confirmation'],{relativeTo : this.route });
+
+
+      // }
     }
 
     
